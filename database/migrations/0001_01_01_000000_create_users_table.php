@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('document', 14)->unique();
             $table->enum('document_type', ['cpf', 'cnpj']);
             $table->string('email')->unique();
+            $table->enum('role', ['customer', 'barber']);
             $table->string('address');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
